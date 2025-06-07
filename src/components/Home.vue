@@ -52,14 +52,14 @@
       
       <!-- 练习模块 -->
       <el-row :gutter="30" style="margin-top: 30px;">
-        <el-col :span="24">
+        <el-col :span="12">
           <el-card class="algorithm-card quiz-card" shadow="hover" @click="goToQuiz">
             <div class="card-content">
               <div class="card-icon">
                 <el-icon size="60"><Edit /></el-icon>
               </div>
               <h2>算法知识测试</h2>
-              <p>通过选择题测试你对 DFS 和 BFS 算法的掌握程度</p>
+              <p>通过题目测试你对 DFS 和 BFS 算法的掌握程度</p>
               <div class="features">
                 <el-tag type="success">10道题目</el-tag>
                 <el-tag type="info">即时反馈</el-tag>
@@ -67,6 +67,27 @@
               </div>
               <el-button type="primary" size="large" class="start-btn">
                 开始测试
+                <el-icon><ArrowRight /></el-icon>
+              </el-button>
+            </div>
+          </el-card>
+        </el-col>
+        
+        <el-col :span="12">
+          <el-card class="algorithm-card maze-card" shadow="hover" @click="goToMaze">
+            <div class="card-content">
+              <div class="card-icon">
+                <el-icon size="60"><Grid /></el-icon>
+              </div>
+              <h2>迷宫求解游戏</h2>
+              <p>在迷宫中实际体验 DFS 和 BFS 算法的寻路过程</p>
+              <div class="features">
+                <el-tag type="success">可视化求解</el-tag>
+                <el-tag type="info">算法对比</el-tag>
+                <el-tag type="warning">代码展示</el-tag>
+              </div>
+              <el-button type="primary" size="large" class="start-btn">
+                开始游戏
                 <el-icon><ArrowRight /></el-icon>
               </el-button>
             </div>
@@ -153,6 +174,10 @@ export default {
     goToQuiz() {
       this.$router.push('/quiz')
     },
+    goToMaze() {
+      this.$router.push('/maze')
+    },
+
     selectLanguage(lang) {
       this.selectedLanguage = lang
       // 保存到本地存储
@@ -237,6 +262,16 @@ export default {
   color: white;
   border: 1px solid rgba(102, 126, 234, 0.5);
   box-shadow: 0 16px 40px rgba(102, 126, 234, 0.3);
+}
+
+.maze-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.oj-card {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
 }
 
 .card-content {

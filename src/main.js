@@ -8,12 +8,16 @@ import Home from './components/Home.vue'
 import DFSLearning from './components/DFSLearning.vue'
 import BFSLearning from './components/BFSLearning.vue'
 import QuizModule from './components/QuizModule.vue'
+import MazeGame from './components/MazeGame.vue'
+
 
 const routes = [
   { path: '/', component: Home },
   { path: '/dfs', component: DFSLearning },
   { path: '/bfs', component: BFSLearning },
-  { path: '/quiz', component: QuizModule }
+  { path: '/quiz', component: QuizModule },
+  { path: '/maze', component: MazeGame },
+
 ]
 
 const router = createRouter({

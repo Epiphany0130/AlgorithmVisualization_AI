@@ -29,6 +29,11 @@
               <el-icon><Edit /></el-icon>
               算法测试
             </el-menu-item>
+            <el-menu-item index="/maze">
+              <el-icon><Grid /></el-icon>
+              迷宫求解游戏
+            </el-menu-item>
+
           </el-menu>
         </div>
       </el-header>
